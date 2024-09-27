@@ -12,12 +12,12 @@ st.set_page_config(layout="wide", page_title="Olympics Analysis", page_icon="üè
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"]{
-    background-image: url("https://img.freepik.com/free-vector/abstract-gradient-blue-orange-panorama-horizontal-vector-sunset-nature-background_105738-1801.jpg");
+    background-image: url("https://www.travelandleisure.com/thmb/KTIha5CLifSoUD3gx0YP51xc3rY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue0517-4dfc85cb0200460ab717b101ac07888f.jpg");
     background-size: cover;
 }
 
 [data-testid="stSidebar"] {
-    background-image: url("https://cdn.prod.website-files.com/5a9ee6416e90d20001b20038/64f5c4b7cb1f1c2f3220ad73_Rectangle%20(24).svg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Qiasa3abzDKzebe6ubC7WWbz6rMN12OTiw&s");
     background-size: cover;
 }
 </style>
@@ -103,7 +103,7 @@ if user_menu == 'Overall Analysis':
     st.title("No of events over time [Every Sport]")
     fig,ax = plt.subplots(figsize=(20,20))
     x = df.drop_duplicates(['Year','Sport','Event'])
-    ax = sns.heatmap(x.pivot_table(index = 'Sport', columns = 'Year', values = 'Event', aggfunc='count').fillna(0).astype('int'),annot=True,cmap="Blues",vmin=0, vmax=0.5)
+    ax = sns.heatmap(x.pivot_table(index = 'Sport', columns = 'Year', values = 'Event', aggfunc='count').fillna(0).astype('int'),annot=True,cmap="BuPu")
     st.pyplot(fig)
     
     st.title("Most Successful Athletes")
